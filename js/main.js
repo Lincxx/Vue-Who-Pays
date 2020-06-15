@@ -4,7 +4,8 @@ new Vue({
     state: true,
     inputName: '',
     names: [], 
-    showError: false
+    showError: false,
+    result:''
   },
   methods: {
     addNameToList() { 
@@ -24,6 +25,13 @@ new Vue({
       } else { 
         return false;
       }
+    },
+    showResults() { 
+      let rand = this.names[Math.floor(Math.random() * this.names.length)]
+      this.result = rand
+      this.state = false;
+      
+      
     }
   }
 })
