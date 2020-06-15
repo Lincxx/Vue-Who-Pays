@@ -29,9 +29,12 @@ new Vue({
     showResults() { 
       let rand = this.names[Math.floor(Math.random() * this.names.length)]
       this.result = rand
-      this.state = false;
-      
-      
+      this.state = false;      
+    },
+    restApp() { 
+      this.state = true;
+      this.names = [];
+      this.result = ''
     }
   }
 })
