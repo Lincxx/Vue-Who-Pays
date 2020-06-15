@@ -24,6 +24,7 @@
                <div 
                   v-for="(name, index) in names" 
                   :key="index"
+                  @click="removeName(index)"
                >
                   {{name}}
                </div>

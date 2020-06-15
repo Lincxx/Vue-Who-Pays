@@ -31,6 +31,9 @@ new Vue({
       this.result = rand
       this.state = false;      
     },
+    removeName(index) { 
+      this.names.splice(index, 1);
+    },
     restApp() { 
       this.state = true;
       this.names = [];
